@@ -1,0 +1,85 @@
+/* ---RESET E CONFIGURAÇÕES GERAIS--- */
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Estrutura */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Visual */
+  background-color: #111111;
+  color: #ffffff;
+  /* Tipografia */
+  font-family: "Jersey 10", sans-serif;
+}
+
+/* ---CABEÇALHO (HEADER)--- */
+header {
+  /* Estrutura */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Margens */
+  margin: 0 auto;
+  padding: 12px 24px;
+  /* Visual */
+  background-color: #161616;
+  border-bottom: 1px solid #52b788;
+}
+
+h1 {
+  /* Estrutura */
+  flex: 1;
+  /* Tipografia */
+  font-size: 3rem;
+  text-align: center;
+}
+
+#header_logo {
+  /* Estrutura */
+  height: 50px;
+  object-fit: contain;
+}
+
+/* ---RODAPÉ (FOOTER)--- */
+footer {
+  /* Estrutura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  /* Margens */
+  padding: 4px 6px;
+  margin-top: auto;
+  /* Visual */
+  background-color: #161616;
+  border-top: 1px solid #52b788;
+}
+
+footer p {
+  /* Tipografia */
+  font-size: 0.875rem;
+  color: #888888;
+}
+
+footer a {
+  /* Tipografia */
+  color: #52b788;
+  text-decoration: none;
+  /* Interações */
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #52b788;
+}
