@@ -6,9 +6,14 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+
+    <!--Links CSS-->
     <link
       rel="stylesheet"
       href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/game.css" />
 
     <!--Título e Favicon-->
     <title>Carbon Decremental</title>
@@ -58,6 +63,68 @@
       <h1>Carbon Decremental</h1>
     </header>
 
+    <main>
+      <section id="world_panel">
+        <div id="world_map">
+          <img
+            src="images/world-map.png"
+            alt="Mapa Mundi" />
+        </div>
+
+        <div id="resources">
+          <div
+            class="resource-bar"
+            title="Emissões de Carbono">
+            <p class="resource-label">💨 Carbono</p>
+            <p
+              class="resource-value"
+              id="carbon_val">
+              426 PPM (38%)
+            </p>
+            <progress
+              id="carbon_bar"
+              min="0"
+              max="100"
+              value="38"></progress>
+          </div>
+
+          <div
+            class="resource-bar"
+            title="Dinheiro">
+            <p class="resource-label">💵 Dinheiro</p>
+            <p
+              class="resource-value"
+              id="money_val">
+              $0 / %5T (0%)
+            </p>
+            <progress
+              id="money_bar"
+              min="0"
+              max="100"
+              value="0"></progress>
+          </div>
+
+          <div
+            class="resource-bar"
+            title="Pontos de Pesquisa">
+            <p class="resource-label">🧪 Pesquisa</p>
+            <p
+              class="resource-value"
+              id="research_val">
+              0 / 1K pts (0%)
+            </p>
+            <progress
+              id="research_bar"
+              min="0"
+              max="100"
+              value="0"></progress>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills_panel"></section>
+    </main>
+
     <footer>
       <p>Carbon Decremental &copy; 2026</p>
       <p>
@@ -67,5 +134,8 @@
         <a href="">João Vitor Pires</a>
       </p>
     </footer>
+
+    <!--Link do JavaScript-->
+    <script src="js/game.js"></script>
   </body>
 </html>

@@ -1,0 +1,197 @@
+/* ---CONTEÚDO PRINCIPAL (MAIN) ---*/
+main {
+  /* Estrutura */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  width: 100%;
+}
+
+/* ---PAINEL DO MUNDO (ESQUERDA)--- */
+#world_panel {
+  /* Estrutura */
+  display: flex;
+  flex-direction: column;
+  /* Visual */
+  background-color: #121212;
+  border-right: 1px solid #52b788;
+}
+
+#world_map {
+  /* Estrutura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  /* Margens */
+  padding: 16px;
+}
+
+#world_map img {
+  /* Estrutura */
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* ---BARRAS DE RECURSOS--- */
+#resources {
+  /* Estrutura */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+  /* Margens */
+  padding: 16px;
+  /* Visual */
+  background-color: #161616;
+  border-top: 1px solid #52b788;
+}
+
+.resource-bar {
+  /* Estrutura */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  /* Margens */
+  padding: 12px;
+  /* Visual */
+  background-color: #1d1d1d;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+.resource-bar:hover {
+  border-color: #52b788;
+}
+
+.resource-label {
+  /* Estrutura */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* Tipografia */
+  font-size: 1.25rem;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+}
+
+.resource-value {
+  /* Tipografia */
+  font-size: 1.5rem;
+  color: #52b788;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+/* -BARRA DE CARBONO- */
+#carbon_bar {
+  /* Estrutura */
+  width: 100%;
+  height: 12px;
+  /* Margens */
+  margin-top: 8px;
+  /* Visual */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#carbon_bar::-webkit-progress-bar {
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+#carbon_val abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
+/* -CORES DINÂMICAS- */
+/* 1. Seguro (Verde) */
+.bar-safe::-webkit-progress-value {
+  background-color: #52b788 !important;
+}
+.bar-safe::-moz-progress-bar {
+  background-color: #52b788 !important;
+}
+
+/* 2. Alerta (Amarelo/Laranja) */
+.bar-warning::-webkit-progress-value {
+  background-color: #dfb15b !important;
+}
+.bar-warning::-moz-progress-bar {
+  background-color: #dfb15b !important;
+}
+
+/* 3. Crítico (Vermelho) */
+.bar-danger::-webkit-progress-value {
+  background-color: #d94e4e !important;
+}
+.bar-danger::-moz-progress-bar {
+  background-color: #d94e4e !important;
+}
+
+/* -BARRA DE DINHEIRO- */
+#money_bar {
+  /* Estrutura */
+  width: 100%;
+  height: 12px;
+  margin-top: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#money_bar::-webkit-progress-bar {
+  /* Visual */
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+#money_bar::-webkit-progress-value {
+  /* Visual */
+  background-color: #2ec4b6;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+#money_bar::-moz-progress-bar {
+  /* Visual */
+  background-color: #2ec4b6;
+  border-radius: 3px;
+}
+
+/* -BARRA DE PESQUISA- */
+#research_bar {
+  /* Estrutura */
+  width: 100%;
+  height: 12px;
+  margin-top: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#research_bar::-webkit-progress-bar {
+  /* Visual */
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+#research_bar::-webkit-progress-value {
+  /* Visual */
+  background-color: #a855f7;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+#research_bar::-moz-progress-bar {
+  /* Visual */
+  background-color: #a855f7;
+  border-radius: 3px;
+}
