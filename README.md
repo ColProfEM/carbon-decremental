@@ -46,3 +46,32 @@ Como o jogo utiliza requisições assíncronas para carregar a árvore de habili
    ```bash
    git clone [https://github.com/TEU_UTILIZADOR/carbon-decremental.git](https://github.com/TEU_UTILIZADOR/carbon-decremental.git)
    cd carbon-decremental
+
+## 👥 Criadores do Projeto
+
+O **Carbon Decremental** foi idealizado, desenhado e programado por:
+
+<table align="center" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td align="center" width="300" style="border: none; padding: 20px;">
+      <img src="https://github.com/brenoadami.png" width="100px;" alt="Breno Santos Adami" style="border-radius: 50%; border: 2px solid #52b788;"/><br />
+      <sub><b>Breno Santos Adami</b></sub><br />
+      <a href="https://github.com/brenoadami" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="20" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/TEU_LINKEDIN_BRENO" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="20" alt="LinkedIn" />
+      </a>
+    </td>
+    <td align="center" width="300" style="border: none; padding: 20px;">
+      <img src="https://github.com/joaovitorpires.png" width="100px;" alt="João Vitor Pires" style="border-radius: 50%; border: 2px solid #52b788;"/><br />
+      <sub><b>João Vitor Pires</b></sub><br />
+      <a href="https://github.com/joaovitorpires" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="20" alt="GitHub" />
+      </a>
+      <a href="https://linkedin.com/in/TEU_LINKEDIN_JOAO" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="20" alt="LinkedIn" />
+      </a>
+    </td>
+  </tr>
+</table>
