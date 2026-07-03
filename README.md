@@ -7,7 +7,7 @@
 
 ---
 
-## 🕹️ O Jogo - ![Link para jogar](https://carbon-decremental-pearl.vercel.app/)
+## 🕹️ O Jogo - [Link para jogar](https://carbon-decremental-pearl.vercel.app/)
 
 Em **Carbon Decremental**, tu assumes o controlo dos fundos globais e da comunidade científica para combater o aquecimento global. O jogo começa num cenário alarmante de **426 PPM** (Partes por Milhão) de CO₂ na atmosfera. 
 
