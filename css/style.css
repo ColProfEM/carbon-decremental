@@ -11,7 +11,8 @@ body {
   /* Estrutura */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh; /* Altere de min-height para height fixo */
+  overflow: hidden; /* Trava a rolagem global do site do navegador */
   /* Visual */
   background-color: #111111;
   color: #ffffff;
@@ -46,6 +47,42 @@ h1 {
   /* Estrutura */
   height: 50px;
   object-fit: contain;
+}
+
+/* --- CONTROLE DE ÁUDIO DO JOGO --- */
+#audio_container {
+  display: flex;
+  align-items: center;
+}
+
+.audio-btn {
+  background-color: #111111;
+  border: 1px solid #52b788;
+  color: #52b788;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.audio-btn:hover {
+  background-color: #52b788;
+  color: #111111;
+  box-shadow: 0 0 10px rgba(82, 183, 136, 0.5);
+}
+
+/* Estado visual quando a música estiver desligada */
+.audio-btn.muted {
+  border-color: #444444;
+  color: #888888;
+}
+.audio-btn.muted:hover {
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: none;
 }
 
 /* ---RODAPÉ (FOOTER)--- */

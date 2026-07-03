@@ -1,0 +1,167 @@
+{
+  "upgrades": {
+    "init_escopos": {
+      "id": "init_escopos",
+      "name": "Inventário de Emissões de Escopo 1, 2 e 3",
+      "repeatable": true,
+      "current_level": 0,
+      "max_level": null,
+      "base_cost": 10000000000,
+      "cost_currency": "money",
+      "cost_increase_factor": 1.15,
+      "requires": null,
+      "reward_per_level": { "research_points": 1 },
+      "description": "Mapeia emissões corporativas. Fornece +1 Ponto de Pesquisa (PP) por nível. Cada compra aumenta o custo."
+    },
+
+    "portao_reflorestamento": {
+      "id": "portao_reflorestamento",
+      "name": "Reflorestamento de Biomas Locais",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 2,
+      "cost_currency": "research_points",
+      "requires": "init_escopos",
+      "branch": "decarbonization",
+      "description": "Plantio de árvores nativas. Reduz o avanço do carbono em 0.2 ppm/s.",
+      "effect": { "carbon_ps": 0.2 }
+    },
+    "biometano_industrial": {
+      "id": "biometano_industrial",
+      "name": "Transição para Biometano Industrial",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 12,
+      "cost_currency": "research_points",
+      "requires": "portao_reflorestamento",
+      "branch": "decarbonization",
+      "description": "Substitui gás fóssil por biometano em fábricas. Reduz o carbono em 0.5 ppm/s.",
+      "effect": { "carbon_ps": 0.5 }
+    },
+    "eletrificacao_frotas": {
+      "id": "eletrificacao_frotas",
+      "name": "Eletrificação de Frotas Logísticas",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 25000000000,
+      "cost_currency": "money",
+      "requires": "biometano_industrial",
+      "branch": "decarbonization",
+      "description": "Caminhões elétricos reduzem o carbono em 1.2 ppm/s, mas custam 50M/s de manutenção.",
+      "effect": { "carbon_ps": 1.2, "money_ps_penalty": 50000000 }
+    },
+    "captura_direta_dac": {
+      "id": "captura_direta_dac",
+      "name": "Usinas de Captura Direta de Ar (DAC)",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 150,
+      "cost_currency": "research_points",
+      "requires": "eletrificacao_frotas",
+      "branch": "decarbonization",
+      "description": "Tecnologia extrema que suga o CO2 da atmosfera. Reduz massivos 3.0 ppm/s.",
+      "effect": { "carbon_ps": 3.0 }
+    },
+
+    "portao_auditoria": {
+      "id": "portao_auditoria",
+      "name": "Auditoria de Eficiência Energética",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 2,
+      "cost_currency": "research_points",
+      "requires": "init_escopos",
+      "branch": "green_economy",
+      "description": "Multiplica a geração de dinheiro base por 1.5x.",
+      "effect": { "money_multiplier": 1.5 }
+    },
+    "taxa_carbono": {
+      "id": "taxa_carbono",
+      "name": "Taxação de Carbono (Carbon Tax)",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 20,
+      "cost_currency": "research_points",
+      "requires": "portao_auditoria",
+      "branch": "green_economy",
+      "description": "Arrecada dinheiro passivo proporcional ao nível de ppm atual da atmosfera.",
+      "effect": { "money_from_ppm": 0.1 }
+    },
+    "green_bonds": {
+      "id": "green_bonds",
+      "name": "Títulos Verdes de Emergência",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 0,
+      "cost_currency": "money",
+      "requires": "taxa_carbono",
+      "branch": "green_economy",
+      "description": "Injeção imediata de 5 Bilhões, mas reduz seus ganhos passivos temporariamente.",
+      "effect": { "instant_cash": 5000000000, "temporary_penalty": 0.8 }
+    },
+    "desinvestimento": {
+      "id": "desinvestimento",
+      "name": "Desinvestimento em Combustíveis Fósseis",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 85,
+      "cost_currency": "research_points",
+      "requires": "green_bonds",
+      "branch": "green_economy",
+      "description": "Grandes fundos abandonam o petróleo. Reduz o custo de upgrades das colunas em 20%.",
+      "effect": { "green_discount": 0.2 }
+    },
+
+    "portao_bolsas_pesquisa": {
+      "id": "portao_bolsas_pesquisa",
+      "name": "Bolsas de Iniciação Científica",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 4,
+      "cost_currency": "research_points",
+      "requires": "init_escopos",
+      "branch": "research_centers",
+      "description": "Financia a base acadêmica. Multiplica a geração de pontos de pesquisa em 1.2x.",
+      "effect": { "research_multiplier": 1.2 }
+    },
+    "gemeos_digitais": {
+      "id": "gemeos_digitais",
+      "name": "Supercomputação e Gêmeos Digitais",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 45,
+      "cost_currency": "research_points",
+      "requires": "portao_bolsas_pesquisa",
+      "branch": "research_centers",
+      "description": "Simulações climáticas aceleradas. Multiplica a geração de PP em 1.5x.",
+      "effect": { "research_multiplier": 1.5 }
+    },
+    "celulas_perovskita": {
+      "id": "celulas_perovskita",
+      "name": "P&D em Células de Perovskita",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 110,
+      "cost_currency": "research_points",
+      "requires": "gemeos_digitais",
+      "branch": "research_centers",
+      "description": "Revolução na energia solar. Concede 25% de desconto em todos os outros upgrades não-repetíveis.",
+      "effect": { "global_discount": 0.25 }
+    },
+    "fusao_nuclear": {
+      "id": "fusao_nuclear",
+      "name": "Fusão Nuclear Comercial",
+      "repeatable": false,
+      "purchased": false,
+      "cost": 450,
+      "cost_currency": "research_points",
+      "requires": "celulas_perovskita",
+      "branch": "research_centers",
+      "description": "O Santo Graal da energia. Zera custos de manutenção e dobra a eficiência da captura de carbono.",
+      "effect": {
+        "zero_maintenance": true,
+        "carbon_efficiency_multiplier": 2.0
+      }
+    }
+  }
+}

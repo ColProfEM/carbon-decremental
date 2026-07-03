@@ -5,6 +5,7 @@ main {
   grid-template-columns: 1fr 1fr;
   flex: 1;
   width: 100%;
+  min-height: 0; /* CRÍTICO: Impede que o grid estique para fora do ecrã se os filhos forem grandes */
 }
 
 /* ---PAINEL DO MUNDO (ESQUERDA)--- */

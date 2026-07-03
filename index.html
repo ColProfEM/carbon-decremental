@@ -14,6 +14,9 @@
     <link
       rel="stylesheet"
       href="css/resources.css" />
+    <link
+      rel="stylesheet"
+      href="css/skills.css" />
 
     <!--Título e Favicon-->
     <title>Carbon Decremental</title>
@@ -60,7 +63,21 @@
         id="header_logo"
         src="favicon.svg"
         alt="Logo Carbon Decremental" />
+
       <h1>Carbon Decremental</h1>
+
+      <div id="audio_container">
+        <button
+          id="music_toggle"
+          class="audio-btn">
+          🔊 MUSIC: OFF
+        </button>
+      </div>
+
+      <audio
+        id="bg_music"
+        loop
+        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
     </header>
 
     <main>
@@ -72,9 +89,7 @@
         </div>
 
         <div id="resources">
-          <div
-            class="resource-bar"
-            title="Emissões de Carbono">
+          <div class="resource-bar">
             <p class="resource-label">💨 Carbono</p>
             <p
               class="resource-value"
@@ -88,9 +103,7 @@
               value="38"></progress>
           </div>
 
-          <div
-            class="resource-bar"
-            title="Dinheiro">
+          <div class="resource-bar">
             <p class="resource-label">💵 Dinheiro</p>
             <p
               class="resource-value"
@@ -104,9 +117,7 @@
               value="0"></progress>
           </div>
 
-          <div
-            class="resource-bar"
-            title="Pontos de Pesquisa">
+          <div class="resource-bar">
             <p class="resource-label">🧪 Pesquisa</p>
             <p
               class="resource-value"
@@ -122,7 +133,41 @@
         </div>
       </section>
 
-      <section id="skills_panel"></section>
+      <section id="skills_panel">
+        <div class="initial-upgrade-container">
+          <h3>Geração de Conhecimento Base</h3>
+          <div id="container-inicial"></div>
+        </div>
+
+        <div class="branches-wrapper">
+          <div
+            class="branch-column decarbonization"
+            id="branch-decarbonization">
+            <h2>🌿 Descarbonização</h2>
+            <div
+              class="upgrades-list"
+              id="list-decarbonization"></div>
+          </div>
+
+          <div
+            class="branch-column green_economy"
+            id="branch-green_economy">
+            <h2>💰 Economia Verde</h2>
+            <div
+              class="upgrades-list"
+              id="list-green_economy"></div>
+          </div>
+
+          <div
+            class="branch-column research_centers"
+            id="branch-research_centers">
+            <h2>🔬 Centros de Pesquisa</h2>
+            <div
+              class="upgrades-list"
+              id="list-research_centers"></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -137,5 +182,6 @@
 
     <!--Link do JavaScript-->
     <script src="js/state.js"></script>
+    <script src="js/skills.js"></script>
   </body>
 </html>
